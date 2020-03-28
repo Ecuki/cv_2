@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
 });
 var howtos = express.Router();
 require("./server/howto.routes.js")(howtos);
-
+app.use("/api", howtos);
 // Connecting to the database
 mongoose.Promise = global.Promise;
 mongoose
@@ -64,6 +64,5 @@ if (process.env.NODE_ENV === "production") {
     );
   });
 }
-app.use("/api", howtos);
 
 module.exports = app;
