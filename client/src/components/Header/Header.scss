@@ -1,0 +1,186 @@
+.header {
+  width: 99%;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #121212;
+  position: fixed;
+  -webkit-box-shadow: 0px 3px 7px -2px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 3px 7px -2px rgba(0, 0, 0, 0.52);
+  z-index: 98;
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+  transition: height 0.3s;
+  margin: 0 auto;
+
+  a {
+    left: 0;
+    top: 0;
+    align-self: start;
+    & .logo {
+      font-weight: 900;
+      padding: 20px;
+      font-size: 2rem;
+      @media (min-height: 1024px) {
+        font-size: 4rem;
+      }
+    }
+  }
+  nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    width: calc(99% - 40px);
+    direction: rtl;
+
+    @media (min-width: 1024px) {
+      position: static;
+    }
+    .fa-bars {
+      background-color: transparent;
+      cursor: pointer;
+      height: 2rem;
+      width: 2rem;
+      margin-bottom: 10px;
+      @media (min-height: 1023px) {
+        height: 4rem;
+        width: 4rem;
+      }
+      @media (min-width: 1024px) {
+        display: none;
+      }
+      // @media (min-width: 1024px) {
+      //   display: none;
+      // }
+    }
+    .ul {
+      @media (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        direction: ltr;
+        width: fit-content;
+        background-color: transparent;
+      }
+    }
+    ul {
+      background-color: #fff;
+
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 2px;
+        letter-spacing: 2px;
+        box-shadow: 0 0 3px rgba(51, 51, 51, 0.493);
+        white-space: nowrap;
+        @media (min-width: 1024px) {
+          align-self: center;
+          width: fit-content;
+          word-wrap: normal;
+        }
+        transition: font-size 0.3s linear 0s, width 0.3s linear 0s,
+          padding-left 0.3s linear 0s, padding-right 0.3s linear 0s;
+
+        z-index: 99;
+        &:hover {
+          transform: scaleX(1.05);
+        }
+        @media (orientation: landscape) {
+          padding: 8px 20px;
+        }
+        @media (max-width: 1023.9px) {
+          padding-left: 25%;
+          padding-right: 25%;
+        }
+        @media (min-width: 700px) and (orientation: landscape) {
+        }
+
+        @media (min-height: 812px) {
+        }
+
+        @media (min-width: 1024px) {
+          box-shadow: none;
+        }
+      }
+      .button {
+        padding: 10px;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 2px;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width 0.3s linear 0s;
+        white-space: nowrap;
+        @media (min-width: 700px) and (orientation: landscape) {
+          font-size: 1.2rem;
+        }
+      }
+      .login {
+        background-color: #008cba;
+        color: white;
+      }
+      .logout {
+        border: 3px solid #ba006c;
+      }
+
+      svg {
+        font-size: 1.5rem;
+        opacity: 0.7;
+        transition: 0.3s;
+        &:hover {
+          box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.52);
+        }
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      .hidden {
+        height: 0;
+        margin: 0;
+
+        a {
+          font-size: 0;
+          padding: 0;
+          width: 0;
+        }
+        svg {
+          font-size: 0;
+          height: 0;
+          width: 0;
+
+          path {
+            font-size: 0;
+            line-height: 0;
+            display: none;
+          }
+        }
+
+        .button {
+          font-size: 0;
+          padding: 0;
+          border: 0;
+          margin: 0;
+          width: 0;
+        }
+      }
+    }
+  }
+}

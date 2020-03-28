@@ -1,0 +1,147 @@
+.TV {
+  margin: 0 0 10vh 0;
+  height: 50vh;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 0.9;
+  @media (max-width: 667px) and (orientation: portrait) {
+    display: none;
+  }
+  @media (max-height: 300px) and (orientation: landscape) {
+    display: none;
+  }
+
+  &__frame {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+    height: 44vh;
+    width: 65vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // @media (max-width: 376px) {
+    //   height: 45vh;
+    // }
+    -webkit-box-shadow: 0 9px 2px -2px rgba(0, 0, 0, 0.52);
+    box-shadow: 4px 9px 3px -3px rgba(0, 0, 0, 0.253);
+    border-radius: 5px;
+  }
+  &__screen {
+    position: absolute;
+    height: 37vh;
+    width: 55vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(-7%) translateY(-2%);
+    z-index: -1;
+    background-color: #000;
+    transition: background-color 1s;
+    border-radius: 10px;
+    &-on {
+      animation: appear 0.7s linear both;
+    }
+  }
+  &__switch {
+    position: absolute;
+    width: 4.2vh;
+    height: 4vh;
+    background: rgb(148, 34, 34);
+    background: radial-gradient(
+      circle,
+      rgba(148, 34, 34, 0.6894958667060574) 0%,
+      rgba(255, 0, 0, 1) 100%
+    );
+    border: solid 5px #000;
+    border-width: 1px 5px 5px 1px;
+    border-radius: 50%;
+    border-color: transparent rgb(155, 1, 1) rgb(153, 4, 4) transparent;
+    margin-right: 2px;
+    cursor: pointer;
+    transform: translateX(655%) translateY(-360%);
+
+    &:hover {
+      border-width: 0 2px 3px 0;
+      margin-right: 4px;
+      background-color: rgb(255, 30, 0);
+      border-color: transparent rgb(155, 1, 1) rgb(153, 4, 4) transparent;
+    }
+    &-active {
+      border-width: 0 2px 3px 0;
+      margin-right: 4px;
+      background: rgb(252, 176, 69);
+      background: radial-gradient(
+        circle,
+        rgba(252, 176, 69, 1) 2%,
+        rgba(247, 0, 0, 1) 94%
+      );
+      border-color: transparent rgb(155, 1, 1) rgb(153, 4, 4) transparent;
+      animation: gleam 0.3s linear infinite;
+    }
+  }
+}
+
+@keyframes gleam {
+  0% {
+    background: radial-gradient(
+      circle,
+      rgba(252, 176, 69, 1) 2%,
+      rgba(247, 0, 0, 1) 94%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle,
+      rgb(236, 147, 39) 2%,
+      rgba(247, 0, 0, 1) 94%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle,
+      rgba(252, 176, 69, 1) 2%,
+      rgba(247, 0, 0, 1) 94%
+    );
+  }
+}
+@keyframes appear {
+  0% {
+    background-color: #121212;
+    background-size: 0 0;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+  10% {
+    background-color: #121212;
+    background-size: 10% 10%;
+  }
+  30% {
+    background-color: #121212;
+    background-size: 40% 10%;
+  }
+  50% {
+    background-color: #121212;
+    background-size: 80% 10%;
+  }
+  80% {
+    background-size: 100% 50%;
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
