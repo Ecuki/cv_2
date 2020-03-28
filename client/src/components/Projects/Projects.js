@@ -10,15 +10,15 @@ const projects = [
     preview: "https://ecuki.github.io/company-incomes/",
     imgs: [
       {
-        src: "/React_Portfolio/img/company/tab_1.jpg",
+        src: "/img/company/tab_1.jpg",
         alt: "Material Table with companies incomes"
       },
       {
-        src: "/React_Portfolio/img/company/tab_2.jpg",
+        src: "/img/company/tab_2.jpg",
         alt: "Company details view"
       },
       {
-        src: "/React_Portfolio/img/company/tab_3.jpg",
+        src: "/img/company/tab_3.jpg",
         alt: "Nivo Bar Chart"
       }
     ]
@@ -30,19 +30,19 @@ const projects = [
     preview: "https://ecuki.github.io/CrazyBalls/",
     imgs: [
       {
-        src: "/React_Portfolio/img/crazy_ball/crazy_balls_1.jpg",
+        src: "/img/crazy_ball/crazy_balls_1.jpg",
         alt: "Gravity simulation"
       },
       {
-        src: "/React_Portfolio/img/crazy_ball/crazy_balls_2.jpg",
+        src: "/img/crazy_ball/crazy_balls_2.jpg",
         alt: "Score save in local storage"
       },
       {
-        src: "/React_Portfolio/img/crazy_ball/crazy_balls_3.jpg",
+        src: "/img/crazy_ball/crazy_balls_3.jpg",
         alt: "Scores board"
       },
       {
-        src: "/React_Portfolio/img/crazy_ball/crazy_balls_4.gif",
+        src: "/img/crazy_ball/crazy_balls_4.gif",
         alt: "Modern design and beautiful graphics"
       }
     ]
@@ -54,19 +54,19 @@ const projects = [
     preview: "https://ola-zuzia.herokuapp.com/",
     imgs: [
       {
-        src: "/React_Portfolio/img/ola_zuzia/ola_zuzia_1.gif",
+        src: "/img/ola_zuzia/ola_zuzia_1.gif",
         alt: "Colorful page for Ola and Zuzia"
       },
       {
-        src: "/React_Portfolio/img/ola_zuzia/ola_zuzia_2.gif",
+        src: "/img/ola_zuzia/ola_zuzia_2.gif",
         alt: "Dynamically generated welcome message and photo"
       },
       {
-        src: "/React_Portfolio/img/ola_zuzia/ola_zuzia_3.gif",
+        src: "/img/ola_zuzia/ola_zuzia_3.gif",
         alt: "Simple chat"
       },
       {
-        src: "/React_Portfolio/img/ola_zuzia/ola_zuzia_4.jpg",
+        src: "/img/ola_zuzia/ola_zuzia_4.jpg",
         alt: "Interactive letters"
       }
     ]
@@ -78,23 +78,23 @@ const projects = [
     preview: "https://ecuki.github.io/Portfolio/",
     imgs: [
       {
-        src: "/React_Portfolio/img/portfolio/portfolio_1.jpg",
+        src: "/img/portfolio/portfolio_1.jpg",
         alt: "Portfolio start page"
       },
       {
-        src: "/React_Portfolio/img/portfolio/portfolio_2.jpg",
+        src: "/img/portfolio/portfolio_2.jpg",
         alt: "Flip cards"
       },
       {
-        src: "/React_Portfolio/img/portfolio/portfolio_3.jpg",
+        src: "/img/portfolio/portfolio_3.jpg",
         alt: "Simple image slider"
       },
       {
-        src: "/React_Portfolio/img/portfolio/portfolio_4.jpg",
+        src: "/img/portfolio/portfolio_4.jpg",
         alt: "Circle image slider"
       },
       {
-        src: "/React_Portfolio/img/portfolio/portfolio_5.gif",
+        src: "/img/portfolio/portfolio_5.gif",
         alt: "Circle image slider"
       }
     ]
