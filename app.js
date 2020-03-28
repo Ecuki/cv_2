@@ -19,7 +19,6 @@ app.use(morgan("dev"));
 // Bodyparser Middleware
 app.use(bodyParser.json());
 
-console.log("HALLO" + howtos);
 // DB Config
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -52,7 +51,8 @@ mongoose
 if (process.env.NODE_ENV === "production") {
   // app.use("/", express.static(process.env.PWD + "/client/build"));
   app.use(express.static(path.resolve(__dirname, "./client/build")));
-
+  console.log("Dirname" + __dirname);
+  console.log("PWD" + process.env.PWD);
   app.get("*", (req, res) => {
     res.sendFile(
       // path.resolve(process.env.PWD, "client", "build", "index.html")
