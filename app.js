@@ -18,6 +18,7 @@ app.use(cors());
 app.use(morgan("dev"));
 // Bodyparser Middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // DB Config
 app.use(function(req, res, next) {
@@ -32,9 +33,9 @@ app.use(function(req, res, next) {
 var howtos = express.Router();
 require("./server/howto.routes.js")(howtos);
 app.use("/api", howtos);
-mongoose.Promise = global.Promise;
 
 // Connecting to the database
+mongoose.Promise = global.Promise;
 mongoose
   .connect(config.MONGO_URI, {
     useNewUrlParser: true
