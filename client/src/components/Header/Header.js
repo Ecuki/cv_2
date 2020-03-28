@@ -57,10 +57,10 @@ function Header() {
     };
   });
 
-  const PATH = "/React_Portfolio";
+  const PATH = "";
   return (
     <div className="header">
-      <Link to={PATH}>
+      <Link to={`/${PATH}`}>
         <Logo />
       </Link>
       <OutsideAlerter

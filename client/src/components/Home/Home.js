@@ -126,14 +126,9 @@ function Home() {
           id="projects"
           className="projects"
           text="projects"
-          to="/React_Portfolio/projects"
+          to="/projects"
         />
-        <Button
-          id="contact"
-          className="contact"
-          text="contact"
-          to="/React_Portfolio/contact"
-        />
+        <Button id="contact" className="contact" text="contact" to="/contact" />
         <img
           className="ship"
           id="ship"

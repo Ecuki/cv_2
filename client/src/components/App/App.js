@@ -13,7 +13,7 @@ import history from "../../Login/utils/history";
 
 function App() {
   const { loading } = useAuth0();
-  const PATH = "/React_Portfolio";
+  const PATH = "/";
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -23,10 +23,10 @@ function App() {
         <Header />
         <Switch>
           <Route path={`${PATH}`} exact component={Home} />
-          <Route path={`${PATH}/projects`} component={Projects} />>
-          <Route path={`${PATH}/contact`} component={Contact} />
-          <Route path={`${PATH}/how-to`} component={HowTo} />
-          <PrivateRoute path={`${PATH}/profile`} component={Profile} />
+          <Route path={`${PATH}projects`} component={Projects} />>
+          <Route path={`${PATH}contact`} component={Contact} />
+          <Route path={`${PATH}how-to`} component={HowTo} />
+          <PrivateRoute path={`${PATH}profile`} component={Profile} />
           <Route path={`${PATH}`} render={() => <div>404</div>} />
         </Switch>
       </Router>

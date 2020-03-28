@@ -49,10 +49,7 @@ mongoose
   });
 // Use Routes
 
-// Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
-  // Set static folder
-  // app.use(express.static("client/build"));
   app.use("/", express.static(process.env.PWD + "/client/build"));
   app.get("*", (req, res) => {
     res.sendFile(
@@ -62,50 +59,3 @@ if (process.env.NODE_ENV === "production") {
 }
 
 module.exports = app;
-// DB Config
-// const db = `${config.MONGO_URI}`;
-
-// Connect to Mongo
-// mongoose
-//   .connect(db, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true
-//   }) // Adding new mongo url parser
-//   .then(() => console.log("MongoDB Connected..."))
-//   .catch(err => console.log(err));
-
-//const mongoose = require("mongoose");
-// mongoose.Promise = global.Promise;
-// const mongoose = require("mongoose");
-// mongoose.Promise = global.Promise;
-
-// // Connecting to the database
-// mongoose
-//   .connect(process.env.REACT_APP_MONGODB, {
-//     useNewUrlParser: true
-//   })
-//   .then(() => {
-//     console.log("Successfully connected to the database");
-//   })
-//   .catch(err => {
-//     console.log("Could not connect to the database. Exiting now...", err);
-//     process.exit();
-//   });
-
-// // Use Routes
-// app.use("/api/howtos", routes);
-
-// // Serve static assets if in production
-// if (process.env.NODE_ENV === "production") {
-//   // Set static folder
-//   app.use(express.static("client/build"));
-
-//   app.get("*", (req, res) => {
-//     console.log(req);
-//     console.log(res);
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//   });
-// }
-
-// module.exports = app;
