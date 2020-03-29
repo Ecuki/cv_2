@@ -11,6 +11,7 @@ const Contact = React.lazy(() => import("../Contact"));
 const HowTo = React.lazy(() => import("../HowTo"));
 const Profile = React.lazy(() => import("../Profile"));
 const PrivateRoute = React.lazy(() => import("../PrivateRoute"));
+const PageNotFound = React.lazy(() => import("../PageNotFound"));
 
 // const Projects = React.lazy(() => import("../Projects"));
 function App() {
@@ -30,7 +31,7 @@ function App() {
             <Route path={`${PATH}contact`} component={Contact} />
             <Route path={`${PATH}how-to`} component={HowTo} />
             <PrivateRoute path={`${PATH}profile`} component={Profile} />
-            <Route path={`${PATH}`} render={() => <div>404</div>} />
+            <Route path={`${PATH}`} component={PageNotFound} />
           </Switch>
         </Suspense>
       </Router>

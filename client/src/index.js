@@ -13,7 +13,7 @@ const onRedirectCallback = appState => {
       : window.location.pathname
   );
 };
-const PATH = "";
+
 console.log(window.location.pathname);
 ReactDOM.render(
   <Auth0Provider

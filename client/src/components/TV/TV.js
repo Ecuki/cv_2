@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useReducer } from "react";
-import { useAsync } from "react-async-hook";
+import React, { useEffect, useReducer } from "react";
+
 import "./TV.scss";
 
 const initialState = {
@@ -46,7 +46,7 @@ function TV({ name, git, preview, imgs, assets }) {
       dispatch({ type: "setImage", payload: imgs[index].src });
       return () => clearInterval(interval);
     }
-  }, [active, imgs.length, index]);
+  }, [active]);
 
   return (
     <>
