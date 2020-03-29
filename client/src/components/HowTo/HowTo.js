@@ -6,13 +6,10 @@ import axios from "axios";
 import "./HowTo.scss";
 import { useEffect } from "react";
 
-// const findPrevElement = (arr, id) => {
-//   const idx = arr.findIndex(item => item.id === id) - 1;
-//   return arr[idx >= 0 ? idx : 1].id;
-// };
-
 const proxy = "/api/howtos";
+
 export const Context = React.createContext();
+
 function appReducer(state, action) {
   switch (action.type) {
     case "load":

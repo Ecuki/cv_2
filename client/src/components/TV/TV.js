@@ -1,28 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
+import { useAsync } from "react-async-hook";
 import "./TV.scss";
 
+const initialState = {
+  active: false,
+  index: 0,
+  image: ""
+};
+
+function appReducer(state, action) {
+  switch (action.type) {
+    case "switchTV":
+      return {
+        ...state,
+        index: 0,
+        active: !state.active
+      };
+    case "incrementIndex":
+      return {
+        ...state,
+        index: action.payload
+      };
+    case "setImage":
+      return {
+        ...state,
+        image: action.payload
+      };
+    default:
+      return state;
+  }
+}
+
 function TV({ name, git, preview, imgs, assets }) {
-  const [active, setActive] = useState(false);
-  const [index, setIndex] = useState("");
-  const handleSwitchTV = () => {
-    setActive(!active);
-    setIndex(0);
-  };
+  const [state, dispatch] = useReducer(appReducer, initialState);
+  const { active, index, image } = state;
 
   useEffect(() => {
     if (active) {
       const interval = setInterval(() => {
-        setIndex(index < imgs.length - 1 ? index + 1 : 0);
+        dispatch({
+          type: "incrementIndex",
+          payload: index < imgs.length - 1 ? index + 1 : 0
+        });
       }, 3500);
+      dispatch({ type: "setImage", payload: imgs[index].src });
       return () => clearInterval(interval);
     }
   }, [active, imgs.length, index]);
-
-  const styles = active
-    ? {
-        backgroundImage: "url(" + imgs[index].src + ")"
-      }
-    : {};
 
   return (
     <>
@@ -48,11 +72,11 @@ function TV({ name, git, preview, imgs, assets }) {
           ></div>
           <div
             className={active ? `TV__screen TV__screen-on` : "TV__screen"}
-            style={styles}
+            style={active ? { backgroundImage: `url(${image})` } : {}}
           ></div>
           <div
             className={active ? `TV__switch TV__switch-active` : "TV__switch"}
-            onClick={handleSwitchTV}
+            onClick={() => dispatch({ type: "switchTV" })}
             title="Turn ON/OFF"
           ></div>
         </div>

@@ -13,15 +13,15 @@ const projects = [
     preview: "https://ecuki.github.io/company-incomes/",
     imgs: [
       {
-        src: "../../assets/img/company/tab_1.jpg",
+        src: "/img/company/tab_1.jpg",
         alt: "Material Table with companies incomes"
       },
       {
-        src: "../../assets/img/company/tab_2.jpg",
+        src: "/img/company/tab_2.jpg",
         alt: "Company details view"
       },
       {
-        src: "../../assets/img/company/tab_3.jpg",
+        src: "/img/company/tab_3.jpg",
         alt: "Nivo Bar Chart"
       }
     ]
@@ -33,19 +33,19 @@ const projects = [
     preview: "https://ecuki.github.io/CrazyBalls/",
     imgs: [
       {
-        src: "../../assets/img/crazy_ball/crazy_balls_1.jpg",
+        src: "/img/crazy_ball/crazy_balls_1.jpg",
         alt: "Gravity simulation"
       },
       {
-        src: "../../assets/img/crazy_ball/crazy_balls_2.jpg",
+        src: "/img/crazy_ball/crazy_balls_2.jpg",
         alt: "Score save in local storage"
       },
       {
-        src: "../../assets/img/crazy_ball/crazy_balls_3.jpg",
+        src: "/img/crazy_ball/crazy_balls_3.jpg",
         alt: "Scores board"
       },
       {
-        src: "../../assets/img/crazy_ball/crazy_balls_4.gif",
+        src: "/img/crazy_ball/crazy_balls_4.gif",
         alt: "Modern design and beautiful graphics"
       }
     ]
@@ -57,19 +57,19 @@ const projects = [
     preview: "https://ola-zuzia.herokuapp.com/",
     imgs: [
       {
-        src: "../../assets/img/ola_zuzia/ola_zuzia_1.gif",
+        src: "/img/ola_zuzia/ola_zuzia_1.gif",
         alt: "Colorful page for Ola and Zuzia"
       },
       {
-        src: "../../assets/img/ola_zuzia/ola_zuzia_2.gif",
+        src: "/img/ola_zuzia/ola_zuzia_2.gif",
         alt: "Dynamically generated welcome message and photo"
       },
       {
-        src: "../../assets/img/ola_zuzia/ola_zuzia_3.gif",
+        src: "/img/ola_zuzia/ola_zuzia_3.gif",
         alt: "Simple chat"
       },
       {
-        src: "../../assets/img/ola_zuzia/ola_zuzia_4.jpg",
+        src: "/img/ola_zuzia/ola_zuzia_4.jpg",
         alt: "Interactive letters"
       }
     ]
@@ -81,29 +81,28 @@ const projects = [
     preview: "https://ecuki.github.io/Portfolio/",
     imgs: [
       {
-        src: "../../assets/img/portfolio/portfolio_1.jpg",
+        src: "/img/portfolio/portfolio_1.jpg",
         alt: "Portfolio start page"
       },
       {
-        src: "../../assets/img/portfolio/portfolio_2.jpg",
+        src: "/img/portfolio/portfolio_2.jpg",
         alt: "Flip cards"
       },
       {
-        src: "../../assets/img/portfolio/portfolio_3.jpg",
+        src: "/img/portfolio/portfolio_3.jpg",
         alt: "Simple image slider"
       },
       {
-        src: "../../assets/img/portfolio/portfolio_4.jpg",
+        src: "/img/portfolio/portfolio_4.jpg",
         alt: "Circle image slider"
       },
       {
-        src: "../../assets/img/portfolio/portfolio_5.gif",
+        src: "/img/portfolio/portfolio_5.gif",
         alt: "Circle image slider"
       }
     ]
   }
 ];
-
 function Projects() {
   return (
     <div className="projects-site">
