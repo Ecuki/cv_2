@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useAsync } from "react-async-hook";
-import eyeIcon from "../../assets/img/eye.svg";
-import gitIcon from "../../assets/img/github_icon.svg";
-import tvFrame from "../../assets/img/tv-cut2.png";
 import "./TV.scss";
 
-const fetchImage = async url => await fetch(url);
-
-function TV({ name, git, preview, imgs }) {
-  const asyncImage = useAsync(fetchImage, [tvFrame]);
+function TV({ name, git, preview, imgs, assets }) {
   const [active, setActive] = useState(false);
   const [index, setIndex] = useState("");
   const handleSwitchTV = () => {
@@ -40,21 +33,18 @@ function TV({ name, git, preview, imgs }) {
         rel="noopener noreferrer"
         title="See demo"
       >
-        <img src={eyeIcon} alt="See demo" />
+        <img src={assets.eyeIcon} alt="See demo" />
       </a>
       <a href={git} target="_blank" rel="noopener noreferrer" title="GitHub">
-        <img src={gitIcon} alt="GitHub" />
+        <img src={assets.gitIcon} alt="GitHub" />
       </a>
-
-      {asyncImage.loading && <div className={"gifs__loading"}>Loading</div>}
-      {asyncImage.error && (
-        <div className={"gifs__error"}>Error: {asyncImage.error.message}</div>
-      )}
-      {asyncImage.result && (
+      {!assets.eyeIcon ? (
+        <div className={"gifs__loading"}>Loading</div>
+      ) : (
         <div className="TV">
           <div
             className="TV__frame"
-            style={{ backgroundImage: `url(${asyncImage.result.url})` }}
+            style={{ backgroundImage: `url(${assets.tvFrame})` }}
           ></div>
           <div
             className={active ? `TV__screen TV__screen-on` : "TV__screen"}

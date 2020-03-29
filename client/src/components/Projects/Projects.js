@@ -1,7 +1,10 @@
 import React from "react";
 import TV from "../TV";
 import "./Projects.scss";
-
+import eyeIcon from "../../assets/img/eye.svg";
+import gitIcon from "../../assets/img/github_icon.svg";
+import tvFrame from "../../assets/img/tv-cut2.png";
+const assets = { eyeIcon, gitIcon, tvFrame };
 const projects = [
   {
     id: 1,
@@ -105,7 +108,7 @@ function Projects() {
   return (
     <div className="projects-site">
       {projects.map(project => (
-        <TV key={project.id} {...project} />
+        <TV key={project.id} {...project} assets={assets} />
       ))}
     </div>
   );

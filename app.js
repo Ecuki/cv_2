@@ -55,6 +55,7 @@ if (process.env.NODE_ENV === "production") {
 
   console.log("Dirname" + __dirname);
   console.log("PWD" + process.env.PWD);
+
   app.get("*", (req, res) => {
     res.sendFile(
       path.resolve(process.env.PWD, "client", "build", "index.html")
