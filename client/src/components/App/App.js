@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+
 import { Router, Switch, Route } from "react-router-dom";
 import { useAuth0 } from "../../Login/react-auth0-spa";
 import "./App.scss";
@@ -38,5 +39,6 @@ function App() {
     </div>
   );
 }
+// App.whyDidYouRender = true;
 
 export default App;

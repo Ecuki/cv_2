@@ -6,12 +6,12 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const config = require("./config.js");
 const dotenv = require("dotenv");
-
+const compression = require("compression");
 dotenv.config();
 // routes
 
 const app = express();
-
+app.use(compression());
 // CORS Middleware
 app.use(cors());
 // Logger Middleware

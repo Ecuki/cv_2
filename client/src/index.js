@@ -1,10 +1,18 @@
 import React from "react";
+
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./Login/react-auth0-spa";
 import history from "./Login/utils/history";
+
+if (process.env.NODE_ENV === "development") {
+  const whyDidYouRender = require("@welldone-software/why-did-you-render");
+  whyDidYouRender(React, {
+    trackAllPureComponents: true
+  });
+}
 
 const onRedirectCallback = appState => {
   history.push(
