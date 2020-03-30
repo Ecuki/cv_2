@@ -45,6 +45,7 @@ function appReducer(state, action) {
       return { ...state };
     }
     case "delete":
+      console.log(action.payload);
       axios
         .delete(proxy + "/" + action.payload)
         .then(res => {

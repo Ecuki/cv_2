@@ -9,5 +9,5 @@ module.exports = app => {
 
   app.put("/howtos/:howtoId", howtos.update);
 
-  app.delete("howtos/:howtoId", howtos.delete);
+  app.delete("/howtos/:howtoId", howtos.delete);
 };
